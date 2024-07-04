@@ -318,6 +318,7 @@
         <div class="bg-asento-1 br-5 padding-card sans mt-20 shadow">
             <div style="background-color: black;" class="padding-card">
                 <h4 class="sans text-base">Breackpoints</h4>
+                <p class="text-referencias small-text monospace">Todas las clases anteriores para alineamiento pueden usarse también con los siguientes prefijos para utilizar uno o varios brakpoints:</p>
                 <ul class="no-style monospace text-referencias small-text font-medium">
                     <li class="d-flex g-50"><p>md-</p><p>min-width:768px</p></li>
                     <li class="d-flex g-50"><p>lg-</p><p>min-width:1199px</p></li>
@@ -390,6 +391,36 @@
             </pre>
         </div>
     </section>
+   
+    <section id="switch" class="pl-40 pr-40 mt-50">
+        <h2 class="sans text-base">Switch elements responsive</h2>
+        <div class="mt-20">
+            <h4 class="sans text-base">Ocultar / mostrar componentes en distintos dispositivos</h4>
+            <pre>
+                <code>   
+
+    @media (min-width:991px) {
+        .ocultar-en-pc {
+            display: none;
+        }
+    }
+    
+    @media (max-width:991px) and (min-width: 768px) {
+        .ocultar-en-tablet {
+            display: none;
+        }
+    }
+    
+    @media (max-width:768px) {
+        .ocultar-en-mobile {
+            display: none;
+        }
+    }
+                </code>
+            </pre>
+        </div>
+    </section>
+                
 
 
 </body>
