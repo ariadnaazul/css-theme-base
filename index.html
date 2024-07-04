@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        /* Estilos CSS para el código */
+        pre {
+            background-color: black;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            color: #b1b1b1;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .cuadrado {
+            width: 100%;
+            height: 100px;
+        }
+        
+.cuadrado:hover .normal {
+    display: none; /* Oculta el texto normal al hacer hover */
+}
+.cuadrado .hover{
+    display: none;
+}
+.cuadrado:hover .hover {
+    display: block; /* Muestra el texto al hacer hover */
+}
+    </style>
+</head>
+
+<body class="bg-primario">
+    <h1 class="sans text-base text-center mt-50 mb-50">Theme css</h1>
+    <ul class="text-base no-style">
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#root">Root con variables para el tema</a>
+        </li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#colores">Colores de textos, fondos y
+                subrayados</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#tags">Html general tags</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#font-family">Font family</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#font-weight">Font weight</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#alineamiento">Alineamiento y gap</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#desbordamiento">Desbordamiento</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#switch">Switch para elementos
+                responsive</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#elementos">Elementos originales: padding
+                cards, botones, ...sumar los elementos necesarios del tema</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#dinamico">Css dinámico y animaciones</a>
+        </li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#aem">Edición de elementos de AEM
+                ¡¡¡REVISAR!!!</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#myp">Margenes, paddings y border
+                radius</a></li>
+        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#anchos">Anchos</a></li>
+    </ul>
+    <section id="root" class="pl-40 pr-40 mt-50">
+        <h2 class="sans text-base">Root</h2>
+        <h3 class="sans text-base">En el root del archivo se encuentran las variables css donde podemos definir estilos
+            para nuestro tema.</h3>
+        <pre>
+            <code>
+    /*Completar con la paleta del proyecto*/
+    --color-primario: ;
+    --color-secundario: ;
+    --color-terciario: ;
+    --color-asento-1: ;
+    --color-asento-2: ;
+    --color-efecto-1: ;
+    --color-efecto-2: ;
+    --color-text-base: ;
+    --color-text-referencias: ;
+
+    /*Completar con las medidas estandar de las tarjetas del proyecto en px*/
+    --padding-card: ;
+    --padding-wide-card: ;
+
+    /*Completar con las medidas de los iconos del proyecto en px*/
+    --icon-small: ;
+    --icon-medium: ;
+    --icon-large: ;
+
+    /*Completa con el grosor de subrayado o hr que usas en el proyecto en px*/
+    --grosor-hr: ;
+
+    /*Completar con el tiempo de transición para el cambio de color de los textos al hacer hover*/
+    --tiempo-de-transicion-color-texto: ;
+
+    /*Completar con el tiempo de transición para el cambio de color de los background al hacer hover*/
+    --tiempo-de-transicion-color-bg: ;
+            </code>
+        </pre>
+
+    </section>
+    <section id="colores" class="pl-40 pr-40 mt-50">
+        <h2 class="sans text-base">Colores</h2>
+        <h3 class="sans text-base">En esta sección se encuentran las clases para aplicar los colores del tema a <span class="sans text-asento-2 uppercase text-hover-asento-1">textos, background y subrayados o hr</span>.
+        </h3>
+        <h4 class="sans text-base">La nomenclatura es a siguiente:</h4> 
+        <div class="grid-container pt-20 pb-20 padding-card">
+            <div class=" cuadrado bg-primario shadow d-flex centrado bg-hover-secundario"><p class="sans text-base text-center normal">.bg-primario</p><p class="sans text-base text-center hover">.bg-hover-secundario</p></div>
+            <div class=" cuadrado bg-secundario shadow d-flex centrado bg-hover-terciario"><p class="sans text-base text-center normal">.bg-secundario</p><p class="sans text-base text-center hover">.bg-hover-terciario</p></div>
+            <div class=" cuadrado bg-terciario shadow d-flex centrado bg-hover-asento-1"><p class="sans text-base text-center normal">.bg-terciario</p><p class="sans text-base text-center hover">.bg-hover-asento-1</p></div>
+            <div class=" cuadrado bg-asento-1 shadow d-flex centrado bg-hover-asento-2"><p class="sans text-base text-center normal">.bg-asento-1</p><p class="sans text-base text-center hover">.bg-hover-asento-2</p></div>
+            <div class=" cuadrado bg-asento-2 shadow d-flex centrado bg-hover-efecto-1"><p class="sans text-base text-center normal">.bg-asento-2</p><p class="sans text-base text-center hover">.bg-hover-efecto-1</p></div>
+            <div class=" cuadrado bg-efecto-1 shadow d-flex centrado bg-hover-efecto-2"><p class="sans text-base text-center normal">.bg-efecto-1</p><p class="sans text-base text-center hover">.bg-hover-efecto-12</p></div>
+            <div class=" cuadrado bg-efecto-2 shadow d-flex centrado bg-hover-primario"><p class="sans text-base text-center normal">.bg-efecto-2</p><p class="sans text-base text-center hover">.bg-hover-primario</p></div>
+        </div>
+        <div style="background-color: black;" class="grid-container padding-card br-5">
+            <div class="cuadrado d-flex centrado  text-primario  text-hover-secundario"><p class="sans text-center normal">.text-primario</p><p class="sans text-center hover">.text-hover-secundario</p></div>
+            <div class="cuadrado d-flex centrado text-secundario text-hover-terciario"><p class="sans text-center normal">.text-secundario</p><p class="sans text-center hover">.text-hover-terciario</p></div>
+            <div class="cuadrado d-flex centrado text-terciario text-hover-asento-1"><p class="sans  text-center normal">.text-terciario</p><p class="sans text-center hover">.text-hover-asento-1</p></div>
+            <div class="cuadrado d-flex centrado text-asento-1 text-hover-asento-2"><p class="sans text-center normal">.text-asento-1</p><p class="sans text-center hover">.text-hover-asento-2</p></div>
+            <div class="cuadrado d-flex centrado text-asento-2 text-hover-efecto-1"><p class="sans text-center normal">.text-asento-2</p><p class="sans text-center hover">.text-hover-efecto-1</p></div>
+            <div class="cuadrado d-flex centrado text-efecto-1 text-hover-efecto-2"><p class="sans text-center normal">.text-efecto-1</p><p class="sans text-center hover">.text-hover-efecto-2</p></div>
+            <div class="cuadrado d-flex centrado text-efecto-2 text-hover-base"><p class="sans text-center normal">.text-efecto-2</p><p class="sans text-center hover">.text-hover-base</p></div>
+            <div class="cuadrado d-flex centrado text-base text-hover-referencias"><p class="sans text-center normal">.text-base</p><p class="sans text-center hover">.text-hover-referencias</p></div>
+            <div class="cuadrado d-flex centrado text-referencias text-hover-primario"><p class="sans text-center normal">.text-referencias</p><p class="sans text-center normal hover">.text-primario</p></div>
+        </div>
+        <div style="background-color: black;" class="padding-card br-5 mt-20">
+            <p class="sans text-base">.subrayado-primario</p>
+            <hr class="subrayado-primario">
+            <p class="sans text-base">.subrayado-secundario</p>
+            <hr class="subrayado-secundario">
+            <p class="sans text-base">.subrayado-terciario</p>
+            <hr class="subrayado-terciario">
+            <p class="sans text-base">.subrayado-asento-1</p>
+            <hr class="subrayado-asento-1">
+            <p class="sans text-base">.subrayado-asento-2</p>
+            <hr class="subrayado-asento-2">
+            <p class="sans text-base">.subrayado-efecto-1</p>
+            <hr class="subrayado-efecto-1">
+            <p class="sans text-base">.subrayado-efecto-2</p>
+            <hr class="subrayado-efecto-2">
+            <p class="sans text-base">.subrayado-base</p>
+            <hr class="subrayado-base">
+            <p class="sans text-base">.subrayado-referencias</p>
+            <hr class="subrayado-referencias">
+        </div>
+    </section>
+    <section id="tags" class="pl-40 pr-40 mt-50">
+        <h2 class="sans text-base">HTML tags</h2>
+        <h3 class="sans text-base">Modificaciones basicas a elementos html ntivos + clases reutilizables.
+        </h3>
+        <pre>
+            <code>
+    
+    /*Si hace fala definir las medidas de los headers
+
+    h1 { 
+        font-size: ;
+        font-weight: ;
+        line-height: ;
+    }
+    */
+                
+    body {
+        overflow-x: hidden;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    b {
+        font-family: inherit !important;
+        font-size: inherit;
+    }
+
+    sup {
+        font-weight: 300;
+    }
+
+    .small-text {
+        font-size: 12px;
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+    ul.no-style {
+        list-style: none;
+    }
+            </code>
+        </pre>
+    </section>
+    <section id="font-family" class="pl-40 pr-40 mt-50">
+        <h2 class="sans text-base">Font Family</h2>
+        <h3 class="sans text-base">Declarar clases para cada familia según el tema.</h3>
+        <p class="sasn text-base">.sans</p>
+        <p class="helvetica text-base">.helvetica</p>
+    </section>
+    <section id="font-weight" class="pl-40 pr-40 mt-50">
+        <h2 class="sans text-base">Font Weight</h2>
+        <h3 class="sans text-base">Pesos de las fonts</h3>
+        <p class="sans font-light text-base">.font-light</p>
+        <p class="sans font-normal text-base">.font-normal</p>
+        <p class="sans font-medium text-base">.font-medium</p>
+        <p class="sans font-semibold text-base">.font-semibold</p>
+        <p class="sans font-bold text-base">.font-bold</p>
+        <p class="sans font-extra-bold text-base">.font-extra-bold</p>
+        <p class="sans font-black text-base">.font-black</p>
+
+    </section>
+    <section id="alineamiento" class="pl-40 pr-40 mt-50">
+        <h2 class="sans text-base">Alineamiento y gap</h2>
+        <h3 class="sans text-base">Alineamiento de textos, flex y gap.
+
+        </h3>
+        <div class="bg-asento-1 br-5 padding-card sans font-bold shadow">
+            <p class="text-center">.text-center</p>
+            <p class="text-start">.text-start</p>
+            <p class="text-end">.text-end</p>
+        </div>
+        <div class="bg-asento-1 br-5 padding-card sans font-bold  mt-20 shadow">
+            <h4 class="sans text-center">.d-flex .just-between</h4>
+            <div class="d-flex just-between">
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+            </div>
+        </div>
+        <div class="bg-asento-1 br-5 padding-card sans font-bold  mt-20 shadow">
+            <h4 class="sans text-center">.d-flex .just-evenly</h4>
+            <div class="d-flex just-evenly">
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+            </div>
+        </div>
+        <div class="bg-asento-1 br-5 padding-card sans font-bold  mt-20 shadow">
+            <h4 class="sans text-center">.d-flex .just-around</h4>
+            <div class="d-flex just-around">
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+            </div>
+        </div>
+        <div class="bg-asento-1 br-5 padding-card sans font-bold  mt-20 shadow">
+            <h4 class="sans text-center">.d-flex .just-start .g-10</h4>
+            <div class="d-flex just-start g-10">
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+            </div>
+        </div>
+        <div class="bg-asento-1 br-5 padding-card sans font-bold  mt-20 shadow">
+            <h4 class="sans text-center">.d-flex .just-end g-10</h4>
+            <div class="d-flex just-end g-10">
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+                <div class="bg-secundario w-20 padding-card"></div>
+            </div>
+        </div>
+        <div class="bg-asento-1 br-5 padding-card sans font-bold  mt-20 shadow">
+            <div style="background-color: black; height: 100px;" class="padding-card d-flex align-center mb-20">
+                <p class="sans text-base">.d-flex .align-center</p>
+            </div>
+            <div style="background-color: black; height: 100px;" class="padding-card d-flex align-start mb-20">
+                <p class="sans text-base">.d-flex .align-start</p>
+            </div>
+            <div style="background-color: black; height: 100px;" class="padding-card d-flex align-end mb-20">
+                <p class="sans text-base">.d-flex .align-end</p>
+            </div>
+            <div style="background-color: black; height: 100px;" class="padding-card d-flex centrado mb-20">
+                <p class="sans text-base">.d-flex .centrado</p>
+            </div>
+            
+        </div>
+        <div class="bg-asento-1 br-5 padding-card sans font-bold  mt-20 shadow">
+            <div style="background-color: black; height: 120px;" class="padding-card">
+                <div class="bg-primario padding-card w-20 m-auto"><p class="text-center text-base">.w-20 .m-auto</p></div>
+            </div>
+        </div>
+        <div class="mt-50">
+            <h4 class="sans text-base">Otras clases:</h4>
+            <pre>
+                <code>
+    .d-none {
+        display: none;
+    }  
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .flex-no-wrap {
+        flex-wrap: nowrap;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+
+    .flex-row {
+        flex-direction: row;
+    }
+                </code>
+            </pre>
+        </div>
+        
+        
+
+
+    </section>
+
+
+</body>
+
+</html>
