@@ -23,15 +23,15 @@ Indice:
     /* Azul índigo oscuro */
     --color-secundario: #512DA8;
     /* Violeta profundo */
-    --color-terciario: #880E4F;
+    --color-terciario: #4d1a9f;
     /* Rosa vino */
-    --color-asento-1: #7986CB;
+    --color-asento-1: #7d69e1;
     /* Azul lavanda */
     --color-asento-2: #FF4081;
     /* Rosa brillante */
-    --color-efecto-1: #7E57C2;
+    --color-efecto-1: #b09ad6;
     /* Violeta claro */
-    --color-efecto-2: #29B6F6;
+    --color-efecto-2: #47124e;
     /* Azul claro */
     --color-text-base: #FFFFFF;
     /* Texto blanco */
@@ -58,6 +58,51 @@ Indice:
 
     /*Small*/
     --small-text: 14px;
+
+    /*Botones del tema*/
+
+    /*btn-1*/
+    --btn-theme-1-bg: var(--color-efecto-1);
+    --btn-theme-1-color: var(--color-text-base) ;
+    --btn-theme-1-border: solid 2px var(--color-asento-1);
+    --btn-theme-1-border-radius: 50px;
+    --btn-theme-1-text-align: center;
+    --btn-theme-1-transition: all .2s;
+    --btn-theme-1-padding: 10px 40px;
+    --btn-theme-1-width:fit-content;
+    /*Hover*/
+    --btn-theme-1-hover-bg: var(--color-asento-1);
+    --btn-theme-1-hover-color: ;
+    --btn-theme-1-hover-border: solid 2px var(--color-text-base) ;
+
+     /*btn-2*/
+     --btn-theme-2-bg: ;
+     --btn-theme-2-color: ;
+     --btn-theme-2-border: ;
+     --btn-theme-2-border-radius: ;
+     --btn-theme-2-text-align: ;
+     --btn-theme-2-transition: ;
+     --btn-theme-2-padding: ;
+     --btn-theme-2-width: ;
+     /*Hover*/
+     --btn-theme-2-hover-bg: ;
+     --btn-theme-2-hover-color: ;
+     --btn-theme-2-hover-border: ;
+
+      /*btn-1*/
+    --btn-theme-3-bg: ;
+    --btn-theme-3-color: ;
+    --btn-theme-3-border: ;
+    --btn-theme-3-border-radius: ;
+    --btn-theme-3-text-align: ;
+    --btn-theme-3-transition: ;
+    --btn-theme-3-padding: ;
+    --btn-theme-3-width: ;
+    /*Hover*/
+    --btn-theme-3-hover-bg: ;
+    --btn-theme-3-hover-color: ;
+    --btn-theme-3-hover-border: ;
+
 }
 
 /*Textos*/
@@ -683,19 +728,58 @@ ul.no-style {
     }
 }
 
+
 /*Botones*/
-.btn-theme {
-    background-color: ;
-    border-radius: ;
-    border: ;
-    display: ;
-    justify-content: ;
-    align-items: ;
-    transition: ;
+.btn-theme-1 {
+    background-color: var(--btn-theme-1-bg);
+    border-radius: var(--btn-theme-1-border-radius);
+    border: var(--btn-theme-1-border);
+    color: var(--btn-theme-1-color);
+    text-align: var(--btn-theme-1-text-align);
+    transition: var(--btn-theme-1-transition);
+    padding: var(--btn-theme-1-padding);
+    width: var(--btn-theme-1-width);
 }
 
-.btn-theme:hover {
-    background-color: ;
+.btn-theme-1:hover {
+    background-color: var(--btn-theme-1-hover-bg);
+    color: var(--btn-theme-1-hover-color);
+    border: var(--btn-theme-1-hover-border);
+}
+
+.btn-theme-2 {
+    background-color: var(--btn-theme-2-bg);
+    border-radius: var(--btn-theme-2-border-radius);
+    border: var(--btn-theme-2-border);
+    color: var(--btn-theme-2-color);
+    text-align: var(--btn-theme-2-text-align);
+    transition: var(--btn-theme-2-transition);
+    padding: var(--btn-theme-2-padding);
+    width: var(--btn-theme-2-width);
+
+}
+
+.btn-theme-2:hover {
+    background-color: var(--btn-theme-2-hover-bg);
+    color: var(--btn-theme-2-hover-color);
+    border: var(--btn-theme-2-hover-border);
+}
+
+.btn-theme-3 {
+    background-color: var(--btn-theme-3-bg);
+    border-radius: var(--btn-theme-3-border-radius);
+    border: var(--btn-theme-3-border);
+    color: var(--btn-theme-3-color);
+    text-align: var(--btn-theme-3-text-align);
+    transition: var(--btn-theme-3-transition);
+    padding: var(--btn-theme-3-padding);
+    width: var(--btn-theme-3-width);
+}
+
+.btn-theme-3:hover {
+    background-color: var(--btn-theme-3-hover-bg);
+    color: var(--btn-theme-3-hover-color);
+    border: var(--btn-theme-3-hover-border);
 }
 
 /*Efectos y CSS dinámico*/
@@ -714,30 +798,6 @@ ul.no-style {
 
 .shadow {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-/*Animaciones*/
-@keyframes show {
-
-    /*Animación de aparición de elementos al hacer scroll*/
-    from {
-        opacity: 0;
-        scale: 85%;
-    }
-
-    to {
-        opacity: 1;
-        scale: 100%;
-    }
-}
-
-.show-animation {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-    animation-timeline: --image;
-    animation-name: show;
-    animation-range: entry 25% cover 30%;
-    animation-fill-mode: both;
 }
 
 
@@ -1699,7 +1759,7 @@ ul.no-style {
 }
 
 .br-50 {
-    border-radius: 50%;
+    border-radius: 50px;
 }
 
 /*Anchos*/

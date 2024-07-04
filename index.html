@@ -33,49 +33,106 @@
             width: 100%;
             height: 100px;
         }
-        
-.cuadrado:hover .normal {
-    display: none; /* Oculta el texto normal al hacer hover */
-}
-.cuadrado .hover{
-    display: none;
-}
-.cuadrado:hover .hover {
-    display: block; /* Muestra el texto al hacer hover */
-}
+
+        .cuadrado:hover .normal {
+            display: none;
+            /* Oculta el texto normal al hacer hover */
+        }
+
+        .cuadrado .hover {
+            display: none;
+        }
+
+        .cuadrado:hover .hover {
+            display: block;
+            /* Muestra el texto al hacer hover */
+        }
+
+        #myp pre {
+            min-width: 70px;
+            overflow: hidden;
+            max-width: 40%;
+        }
+
+        body{
+            pad: 0;
+            margin: 0;
+        }
+        .navbar {
+            background-color: black;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0px;
+        }
+
+        .navbar-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+        }
+
+        .navbar-list {
+            display: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .navbar-list.open {
+            display: block;
+        }
+
+        .navbar-list li {
+            margin-bottom: 10px;
+        }
+
+        .text-hover-asento-2:hover {
+            color: var(--color-asento-2);
+            /* Color de texto al pasar el ratón */
+        }
     </style>
 </head>
 
 <body class="bg-primario">
-    <h1 class="sans text-base text-center mt-50 mb-50">Theme css</h1>
-    <ul class="text-base no-style">
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#root">Root con variables para el tema</a>
-        </li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#colores">Colores de textos, fondos y
-                subrayados</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#tags">Html general tags</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#font-family">Font family</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#font-weight">Font weight</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#alineamiento">Alineamiento y gap</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#desbordamiento">Desbordamiento</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#switch">Switch para elementos
-                responsive</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#elementos">Elementos originales: padding
-                cards, botones, ...sumar los elementos necesarios del tema</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#dinamico">Css dinámico y animaciones</a>
-        </li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#aem">Edición de elementos de AEM
-                ¡¡¡REVISAR!!!</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#myp">Margenes, paddings y border
-                radius</a></li>
-        <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#anchos">Anchos</a></li>
-    </ul>
-    <section id="root" class="pl-40 pr-40 mt-50">
+    <div class="navbar">
+        <button class="navbar-toggle" onclick="toggleNavbar()">☰ Menu</button>
+        <ul id="navbar-list" class="navbar-list text-base no-style">
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#root">Root con variables para el
+                    tema</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#colores">Colores de textos, fondos y
+                    subrayados</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#tags">Html general tags</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#font-family">Font family</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#font-weight">Font weight</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#alineamiento">Alineamiento y gap</a>
+            </li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#desbordamiento">Desbordamiento</a>
+            </li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#switch">Switch para elementos
+                    responsive</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#elementos">Elementos originales:
+                    padding-cards, botones, ...sumar los elementos necesarios del tema</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#dinamico">Css dinámico y
+                    animaciones</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#aem">Edición de elementos de AEM</a>
+            </li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#myp">Margins y paddings</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#border-radius">Border radius</a></li>
+            <li class="mb-10 sans"><a class="text-base text-hover-asento-2" href="#width">Width</a></li>
+        </ul>
+    </div>
+    <h1 class="sans text-base text-center mt-100 mb-50">Theme css</h1>
+
+    <section id="root" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">Root</h2>
         <h3 class="sans text-base">En el root del archivo se encuentran las variables css donde podemos definir estilos
             para nuestro tema.</h3>
         <pre>
             <code>
+
     /*Completar con la paleta del proyecto*/
     --color-primario: ;
     --color-secundario: ;
@@ -104,34 +161,125 @@
 
     /*Completar con el tiempo de transición para el cambio de color de los background al hacer hover*/
     --tiempo-de-transicion-color-bg: ;
+    
+    /*Small*/
+    --small-text: ;
+
+    /*Botones del tema*/
+
+    /*btn-1*/
+    --btn-theme-1-bg: ;
+    --btn-theme-1-color: ;
+    --btn-theme-1-border: ;
+    --btn-theme-1-border-radius: ;
+    --btn-theme-1-text-align: ;
+    --btn-theme-1-transition: ;
+    /*Hover*/
+    --btn-theme-1-hover-bg: ;
+    --btn-theme-1-hover-color: ;
+    --btn-theme-1-hover-border: ;
+
+     /*btn-2*/
+     --btn-theme-2-bg: ;
+     --btn-theme-2-color: ;
+     --btn-theme-2-border: ;
+     --btn-theme-2-border-radius: ;
+     --btn-theme-2-text-align: ;
+     --btn-theme-2-transition: ;
+     /*Hover*/
+     --btn-theme-2-hover-bg: ;
+     --btn-theme-2-hover-color: ;
+     --btn-theme-2-hover-border: ;
+
+      /*btn-1*/
+    --btn-theme-3-bg: ;
+    --btn-theme-3-color: ;
+    --btn-theme-3-border: ;
+    --btn-theme-3-border-radius: ;
+    --btn-theme-3-text-align: ;
+    --btn-theme-3-transition: ;
+    /*Hover*/
+    --btn-theme-3-hover-bg: ;
+    --btn-theme-3-hover-color: ;
+    --btn-theme-3-hover-border: ;
+
             </code>
         </pre>
 
     </section>
-    <section id="colores" class="pl-40 pr-40 mt-50">
+    <section id="colores" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">Colores</h2>
-        <h3 class="sans text-base">En esta sección se encuentran las clases para aplicar los colores del tema a <span class="sans text-asento-2 uppercase text-hover-asento-1">textos, background y subrayados o hr</span>.
+        <h3 class="sans text-base">En esta sección se encuentran las clases para aplicar los colores del tema a <span
+                class="sans text-asento-2 uppercase text-hover-asento-1">textos, background y subrayados o hr</span>.
         </h3>
-        <h4 class="sans text-base">La nomenclatura es a siguiente:</h4> 
+        <h4 class="sans text-base">La nomenclatura es a siguiente:</h4>
         <div class="grid-container pt-20 pb-20 padding-card">
-            <div class=" cuadrado bg-primario shadow d-flex centrado bg-hover-secundario"><p class="sans text-base text-center normal">.bg-primario</p><p class="sans text-base text-center hover">.bg-hover-secundario</p></div>
-            <div class=" cuadrado bg-secundario shadow d-flex centrado bg-hover-terciario"><p class="sans text-base text-center normal">.bg-secundario</p><p class="sans text-base text-center hover">.bg-hover-terciario</p></div>
-            <div class=" cuadrado bg-terciario shadow d-flex centrado bg-hover-asento-1"><p class="sans text-base text-center normal">.bg-terciario</p><p class="sans text-base text-center hover">.bg-hover-asento-1</p></div>
-            <div class=" cuadrado bg-asento-1 shadow d-flex centrado bg-hover-asento-2"><p class="sans text-base text-center normal">.bg-asento-1</p><p class="sans text-base text-center hover">.bg-hover-asento-2</p></div>
-            <div class=" cuadrado bg-asento-2 shadow d-flex centrado bg-hover-efecto-1"><p class="sans text-base text-center normal">.bg-asento-2</p><p class="sans text-base text-center hover">.bg-hover-efecto-1</p></div>
-            <div class=" cuadrado bg-efecto-1 shadow d-flex centrado bg-hover-efecto-2"><p class="sans text-base text-center normal">.bg-efecto-1</p><p class="sans text-base text-center hover">.bg-hover-efecto-12</p></div>
-            <div class=" cuadrado bg-efecto-2 shadow d-flex centrado bg-hover-primario"><p class="sans text-base text-center normal">.bg-efecto-2</p><p class="sans text-base text-center hover">.bg-hover-primario</p></div>
+            <div class=" cuadrado bg-primario shadow d-flex centrado bg-hover-secundario">
+                <p class="sans text-base text-center normal">.bg-primario</p>
+                <p class="sans text-base text-center hover">.bg-hover-secundario</p>
+            </div>
+            <div class=" cuadrado bg-secundario shadow d-flex centrado bg-hover-terciario">
+                <p class="sans text-base text-center normal">.bg-secundario</p>
+                <p class="sans text-base text-center hover">.bg-hover-terciario</p>
+            </div>
+            <div class=" cuadrado bg-terciario shadow d-flex centrado bg-hover-asento-1">
+                <p class="sans text-base text-center normal">.bg-terciario</p>
+                <p class="sans text-base text-center hover">.bg-hover-asento-1</p>
+            </div>
+            <div class=" cuadrado bg-asento-1 shadow d-flex centrado bg-hover-asento-2">
+                <p class="sans text-base text-center normal">.bg-asento-1</p>
+                <p class="sans text-base text-center hover">.bg-hover-asento-2</p>
+            </div>
+            <div class=" cuadrado bg-asento-2 shadow d-flex centrado bg-hover-efecto-1">
+                <p class="sans text-base text-center normal">.bg-asento-2</p>
+                <p class="sans text-base text-center hover">.bg-hover-efecto-1</p>
+            </div>
+            <div class=" cuadrado bg-efecto-1 shadow d-flex centrado bg-hover-efecto-2">
+                <p class="sans text-base text-center normal">.bg-efecto-1</p>
+                <p class="sans text-base text-center hover">.bg-hover-efecto-12</p>
+            </div>
+            <div class=" cuadrado bg-efecto-2 shadow d-flex centrado bg-hover-primario">
+                <p class="sans text-base text-center normal">.bg-efecto-2</p>
+                <p class="sans text-base text-center hover">.bg-hover-primario</p>
+            </div>
         </div>
         <div style="background-color: black;" class="grid-container padding-card br-5">
-            <div class="cuadrado d-flex centrado  text-primario  text-hover-secundario"><p class="sans text-center normal">.text-primario</p><p class="sans text-center hover">.text-hover-secundario</p></div>
-            <div class="cuadrado d-flex centrado text-secundario text-hover-terciario"><p class="sans text-center normal">.text-secundario</p><p class="sans text-center hover">.text-hover-terciario</p></div>
-            <div class="cuadrado d-flex centrado text-terciario text-hover-asento-1"><p class="sans  text-center normal">.text-terciario</p><p class="sans text-center hover">.text-hover-asento-1</p></div>
-            <div class="cuadrado d-flex centrado text-asento-1 text-hover-asento-2"><p class="sans text-center normal">.text-asento-1</p><p class="sans text-center hover">.text-hover-asento-2</p></div>
-            <div class="cuadrado d-flex centrado text-asento-2 text-hover-efecto-1"><p class="sans text-center normal">.text-asento-2</p><p class="sans text-center hover">.text-hover-efecto-1</p></div>
-            <div class="cuadrado d-flex centrado text-efecto-1 text-hover-efecto-2"><p class="sans text-center normal">.text-efecto-1</p><p class="sans text-center hover">.text-hover-efecto-2</p></div>
-            <div class="cuadrado d-flex centrado text-efecto-2 text-hover-base"><p class="sans text-center normal">.text-efecto-2</p><p class="sans text-center hover">.text-hover-base</p></div>
-            <div class="cuadrado d-flex centrado text-base text-hover-referencias"><p class="sans text-center normal">.text-base</p><p class="sans text-center hover">.text-hover-referencias</p></div>
-            <div class="cuadrado d-flex centrado text-referencias text-hover-primario"><p class="sans text-center normal">.text-referencias</p><p class="sans text-center normal hover">.text-primario</p></div>
+            <div class="cuadrado d-flex centrado  text-primario  text-hover-secundario">
+                <p class="sans text-center normal">.text-primario</p>
+                <p class="sans text-center hover">.text-hover-secundario</p>
+            </div>
+            <div class="cuadrado d-flex centrado text-secundario text-hover-terciario">
+                <p class="sans text-center normal">.text-secundario</p>
+                <p class="sans text-center hover">.text-hover-terciario</p>
+            </div>
+            <div class="cuadrado d-flex centrado text-terciario text-hover-asento-1">
+                <p class="sans  text-center normal">.text-terciario</p>
+                <p class="sans text-center hover">.text-hover-asento-1</p>
+            </div>
+            <div class="cuadrado d-flex centrado text-asento-1 text-hover-asento-2">
+                <p class="sans text-center normal">.text-asento-1</p>
+                <p class="sans text-center hover">.text-hover-asento-2</p>
+            </div>
+            <div class="cuadrado d-flex centrado text-asento-2 text-hover-efecto-1">
+                <p class="sans text-center normal">.text-asento-2</p>
+                <p class="sans text-center hover">.text-hover-efecto-1</p>
+            </div>
+            <div class="cuadrado d-flex centrado text-efecto-1 text-hover-efecto-2">
+                <p class="sans text-center normal">.text-efecto-1</p>
+                <p class="sans text-center hover">.text-hover-efecto-2</p>
+            </div>
+            <div class="cuadrado d-flex centrado text-efecto-2 text-hover-base">
+                <p class="sans text-center normal">.text-efecto-2</p>
+                <p class="sans text-center hover">.text-hover-base</p>
+            </div>
+            <div class="cuadrado d-flex centrado text-base text-hover-referencias">
+                <p class="sans text-center normal">.text-base</p>
+                <p class="sans text-center hover">.text-hover-referencias</p>
+            </div>
+            <div class="cuadrado d-flex centrado text-referencias text-hover-primario">
+                <p class="sans text-center normal">.text-referencias</p>
+                <p class="sans text-center normal hover">.text-primario</p>
+            </div>
         </div>
         <div style="background-color: black;" class="padding-card br-5 mt-20">
             <p class="sans text-base">.subrayado-primario</p>
@@ -154,7 +302,7 @@
             <hr class="subrayado-referencias">
         </div>
     </section>
-    <section id="tags" class="pl-40 pr-40 mt-50">
+    <section id="tags" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">HTML tags</h2>
         <h3 class="sans text-base">Modificaciones basicas a elementos html ntivos + clases reutilizables.
         </h3>
@@ -201,13 +349,13 @@
             </code>
         </pre>
     </section>
-    <section id="font-family" class="pl-40 pr-40 mt-50">
+    <section id="font-family" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">Font Family</h2>
         <h3 class="sans text-base">Declarar clases para cada familia según el tema.</h3>
         <p class="sasn text-base">.sans</p>
         <p class="helvetica text-base">.helvetica</p>
     </section>
-    <section id="font-weight" class="pl-40 pr-40 mt-50">
+    <section id="font-weight" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">Font Weight</h2>
         <h3 class="sans text-base">Pesos de las fonts</h3>
         <p class="sans font-light text-base">.font-light</p>
@@ -219,7 +367,7 @@
         <p class="sans font-black text-base">.font-black</p>
 
     </section>
-    <section id="alineamiento" class="pl-40 pr-40 mt-50">
+    <section id="alineamiento" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">Alineamiento y gap</h2>
         <h3 class="sans text-base">Alineamiento de textos, flex y gap.
 
@@ -282,17 +430,20 @@
             <div style="background-color: black; height: 100px;" class="padding-card d-flex centrado mb-20">
                 <p class="sans text-base">.d-flex .centrado</p>
             </div>
-            
+
         </div>
         <div class="bg-asento-1 br-5 padding-card sans font-bold  mt-20 shadow">
             <div style="background-color: black; height: 120px;" class="padding-card">
-                <div class="bg-primario padding-card w-20 m-auto"><p class="text-center text-base">.w-20 .m-auto</p></div>
+                <div class="bg-primario padding-card w-20 m-auto">
+                    <p class="text-center text-base">.w-20 .m-auto</p>
+                </div>
             </div>
         </div>
         <div class="mt-50">
             <h4 class="sans text-base">Otras clases:</h4>
             <pre>
                 <code>
+
     .d-none {
         display: none;
     }  
@@ -316,12 +467,19 @@
             </pre>
         </div>
         <div class="bg-asento-1 br-5 padding-card sans mt-20 shadow">
-            <div style="background-color: black;" class="padding-card">
+            <div style="background-color: black;" class="padding-card br-5">
                 <h4 class="sans text-base">Breackpoints</h4>
-                <p class="text-referencias small-text monospace">Todas las clases anteriores para alineamiento pueden usarse también con los siguientes prefijos para utilizar uno o varios brakpoints:</p>
+                <p class="text-referencias small-text monospace">Todas las clases anteriores para alineamiento pueden
+                    usarse también con los siguientes prefijos para utilizar uno o varios breakpoints:</p>
                 <ul class="no-style monospace text-referencias small-text font-medium">
-                    <li class="d-flex g-50"><p>md-</p><p>min-width:768px</p></li>
-                    <li class="d-flex g-50"><p>lg-</p><p>min-width:1199px</p></li>
+                    <li class="d-flex g-50">
+                        <p>md-</p>
+                        <p>min-width:768px</p>
+                    </li>
+                    <li class="d-flex g-50">
+                        <p>lg-</p>
+                        <p>min-width:1199px</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -369,7 +527,7 @@
             </pre>
         </div>
     </section>
-    <section id="desbordamiento" class="pl-40 pr-40 mt-50">
+    <section id="desbordamiento" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">Desbordamiento</h2>
         <div class="mt-20">
             <h4 class="sans text-base">Para evitar el overflow automatico:</h4>
@@ -391,8 +549,8 @@
             </pre>
         </div>
     </section>
-   
-    <section id="switch" class="pl-40 pr-40 mt-50">
+
+    <section id="switch" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">Switch elements responsive</h2>
         <div class="mt-20">
             <h4 class="sans text-base">Ocultar / mostrar componentes en distintos dispositivos</h4>
@@ -420,26 +578,51 @@
             </pre>
         </div>
     </section>
-    <section id="elementos" class="pl-40 pr-40 mt-50">
+    <section id="elementos" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">Elementos reutilizables</h2>
         <div class="mt-20 sans">
-            <h4 class="sans text-base">Paadin card es un padding general con valor a definir en las variables del root, incluye media query ya configurado para mobile.</h4>
+            <h4 class="sans text-base">Paadin card es un padding general con valor a definir en las variables del root,
+                incluye media query ya configurado para mobile.</h4>
 
-            <div class="bg-asento-1 padding-card mb-20"><p>.padding-card</p></div>
-            <div class="bg-asento-1 padding-wide-card mb-50"><p>.padding-wide-card</p></div>
-            <h4 class="sans text-base">.list-no-padding se puede agregar a elementos ul para contrarrestar el padding por defecto</h4>
+            <div class="bg-asento-1 padding-card mb-20 shadow br-5">
+                <p>.padding-card</p>
+            </div>
+            <div class="bg-asento-1 padding-wide-card mb-50 shadow br-5">
+                <p>.padding-wide-card</p>
+            </div>
+            <h4 class="sans text-base">.list-no-padding se puede agregar a elementos ul para contrarrestar el padding
+                por defecto</h4>
             <ul class="list-no-padding sans text-base">
                 <li>.list-no-padding</li>
             </ul>
             <ul class="sans text-base">
                 <li>comparado con el elementos ul sin clase</li>
             </ul>
+            <div class="mt-50">
+                <h4 class="sans text-base">Botones</h4>
+                <p class="sans text-base">En la hoja de estilos se declararon las clases <span
+                        class="text-asento-2">.btn-theme-1, .btn-theme-2 y .btn-theme-3 </span>. <br><br>Los estilos
+                    pueden asignarse desde las variables del root.</p>
+                <div class="btn-theme-1 font-semibold mt-30">.btn-theme-1</div>
+            </div>
         </div>
     </section>
-    <section id="aem" class="pl-40 pr-40 mt-50">
+    <section id="dinamico" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
+        <h2 class="sans text-base">CSS dinámico, efectos y animaciones</h2>
+        <div class="mt-20">
+            <h4 class="sans text-base"></h4>
+            <div class="d-flex g-20">
+                <div class="bg-asento-1 padding-wide-card  w-fit hover-up sans font-semibold">.hover-up</div>
+                <div class="bg-asento-1 padding-wide-card  w-fit shadow sans font-semibold">.shadow</div>
+                <div class="bg-asento-1 padding-wide-card  w-fit hover-shadow sans font-semibold">.hover-shadow</div>
+            </div>
+        </div>
+    </section>
+    <section id="aem" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
         <h2 class="sans text-base">Edición de elementos nativos de AEM</h2>
         <div class="mt-20">
-            <h4 class="sans text-base">Las reglas están declaradas en la hoja de estilos, completar los valores según haga falta:</h4>
+            <h4 class="sans text-base">Las reglas están declaradas en la hoja de estilos, completar los valores según
+                haga falta:</h4>
             <pre>
                 <code>   
 
@@ -482,10 +665,11 @@
         padding-right: 0px;
         padding-left: 0px
     }
+
     */
     .page-section-inner {
         max-width: 100%;
-        /*Evita que en movile el contenido se desborde*/
+        /*Evita que en mobile el contenido se desborde*/
     }
     
     .accordion-container .panel-default,
@@ -498,9 +682,227 @@
             </pre>
         </div>
     </section>
-                
+    <section id="myp" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50 ">
+        <h2 class="sans text-base">Margenes y paddings</h2>
+        <div class="mt-20">
+            <h4 class="sans text-base"></h4>
+        </div>
+        <div class="d-flex bg-asento-1 padding-card g-10 just-evenly flex-wrap shadow br-5 mb-10">
+            <pre>
+                    <code>
+                        
+    mt-10
+    mt-15
+    mt-20
+    mt-30
+    mt-40
+    mt-50
+    mt-60
+    mt-70
+    mt-80
+    mt-90
+    mt-100
+                    </code>
+                </pre>
+            <pre>
+                    <code>
+                        
+    mb-10
+    mb-15
+    mb-20
+    mb-30
+    mb-40
+    mb-50
+    mb-60
+    mb-70
+    mb-80
+    mb-90
+    mb-100
+                    </code>
+                </pre>
+            <pre>
+                    <code>
+                        
+    mr-10
+    mr-15
+    mb-20
+    mr-30
+    mr-40
+    mr-50
+    mr-60
+    mr-70
+    mr-80
+    mr-90
+    mr-100
+                    </code>
+                </pre>
+            <pre>
+                    <code>
+                        
+    ml-10
+    ml-15
+    ml-20
+    ml-30
+    ml-40
+    ml-50
+    ml-60
+    ml-70
+    ml-80
+    ml-90
+    ml-100
+                    </code>
+                </pre>
+
+        </div>
+        <div class="d-flex bg-asento-1 padding-card g-10 just-evenly flex-wrap shadow br-5">
+            <pre>
+                    <code>
+                        
+    pt-10
+    pt-15
+    pt-20
+    pt-30
+    pt-40
+    pt-50
+    pt-60
+    pt-70
+    pt-80
+    pt-90
+    pt-100
+                    </code>
+                </pre>
+            <pre>
+                    <code>
+                        
+    pb-10
+    pb-15
+    pb-20
+    pb-30
+    pb-40
+    pb-50
+    pb-60
+    pb-70
+    pb-80
+    pb-90
+    pb-100
+                    </code>
+                </pre>
+            <pre>
+                    <code>
+                        
+    pr-10
+    pr-15
+    pr-20
+    pr-30
+    pr-40
+    pr-50
+    pr-60
+    pr-70
+    pr-80
+    pr-90
+    pr-100
+                    </code>
+                </pre>
+            <pre>
+                    <code>
+                        
+    pl-10
+    pl-15
+    pl-20
+    pl-30
+    pl-40
+    pl-50
+    pl-60
+    pl-70
+    pl-80
+    pl-90
+    pl-100
+                    </code>
+                </pre>
+
+        </div>
+        <div class="bg-asento-1 br-5 padding-card sans mt-10 shadow">
+            <div style="background-color: black;" class="padding-card br-5">
+                <h4 class="sans text-base">Breackpoints</h4>
+                <p class="text-referencias small-text monospace">Todas las clases anteriores para margin y padding
+                    pueden usarse también con los siguientes prefijos para utilizar uno o varios breakpoints:</p>
+                <ul class="no-style monospace text-referencias small-text font-medium">
+                    <li class="d-flex g-50">
+                        <p>md-</p>
+                        <p>min-width:768px</p>
+                    </li>
+                    <li class="d-flex g-50">
+                        <p>lg-</p>
+                        <p>min-width:1199px</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <section id="border-radius" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
+        <h2 class="sans text-base">Border radius</h2>
+        <div class="d-flex g-10 sans font-semibold flex-wrap">
+            <div class="bg-asento-1 br-5 padding-wide-card">.br-5</div>
+            <div class="bg-asento-1 br-10 padding-wide-card">.br-10</div>
+            <div class="bg-asento-1 br-16 padding-wide-card">.br-16</div>
+            <div class="bg-asento-1 br-20 padding-wide-card">.br-20</div>
+            <div class="bg-asento-1 br-50 w-20 text-center padding-wide-card">.br-50</div>
+
+        </div>
 
 
+    </section>
+
+
+    <section id="width" class="pl-20 pr-20 md-pl-40 md-pr-40 mt-50">
+        <h2 class="sans text-base">Width</h2>
+        <h4 class="sans text-base">Width también puede ser usado con los prefijos <span class="text-asento-2">max- y
+                min-</span></h4>
+        <div class="d-flex g-10 sans font-semibold flex-wrap">
+            <div class="bg-asento-1 text-center w-fit padding-card">.w-fit</div>
+            <div class="bg-asento-1 text-center w-20 padding-card">.w-20</div>
+            <div class="bg-asento-1 text-center w-30 padding-card">.w-30</div>
+            <div class="bg-asento-1 text-center w-40 padding-card">.w-40</div>
+            <div class="bg-asento-1 text-center w-50 padding-card">.w-50</div>
+            <div class="bg-asento-1 text-center w-60 padding-card">.w-60</div>
+            <div class="bg-asento-1 text-center w-70 padding-card">.w-70</div>
+            <div class="bg-asento-1 text-center w-80 padding-card">.w-80</div>
+            <div class="bg-asento-1 text-center w-90 padding-card">.w-90</div>
+            <div class="bg-asento-1 text-center w-100 padding-card">.w-100</div>
+        </div>
+        <div class="bg-asento-1 br-5 padding-card sans mt-10 shadow">
+            <div style="background-color: black;" class="padding-card br-5">
+                <h4 class="sans text-base">Breackpoints</h4>
+                <p class="text-referencias small-text monospace">Las clases <span class="text-asento-2">max-w- y
+                        min-w-</span> también pueden usarse con los siguientes prefijos para utilizar uno o varios
+                    breakpoints:</p>
+                <ul class="no-style monospace text-referencias small-text font-medium">
+                    <li class="d-flex g-50">
+                        <p>md-</p>
+                        <p>min-width:768px</p>
+                    </li>
+                    <li class="d-flex g-50">
+                        <p>lg-</p>
+                        <p>min-width:1199px</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+    <script>
+        function toggleNavbar() {
+            var navbarList = document.getElementById('navbar-list');
+            navbarList.classList.toggle('open');
+        }
+
+    </script>
 </body>
 
 </html>
