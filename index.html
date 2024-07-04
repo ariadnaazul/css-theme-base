@@ -436,6 +436,68 @@
             </ul>
         </div>
     </section>
+    <section id="aem" class="pl-40 pr-40 mt-50">
+        <h2 class="sans text-base">Edición de elementos nativos de AEM</h2>
+        <div class="mt-20">
+            <h4 class="sans text-base">Las reglas están declaradas en la hoja de estilos, completar los valores según haga falta:</h4>
+            <pre>
+                <code>   
+
+    .clase-accordion-element .panel-body {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .panel-title a {
+        /*Para darle estilos a los titulos de los accordion elements*/
+        font-family: ;
+        font-style: ;
+        font-weight: ;
+    }
+    
+    @media(max-width: 1199px) {
+        .panel-heading {
+            /*Aplicar estilos diferentes*/
+        }
+    }
+    
+    .panel-title .fa {
+        /*Modificar los iconos de los desplegables por defecto de AEM*/
+        background-color: ;
+        padding: ;
+        border-radius: ;
+    }
+    
+    .panel-title .fa::before {
+        /*Modificar el tamaño del icono*/
+        font-size: ;
+    }
+    
+    .fa:hover {
+        color: ;
+    }
+    
+    /* Revisar si necesitamos esto, a veces puede ayudar a que se vean mejor las cajas de contenido
+    .main-container>.container-fluid {
+        padding-right: 0px;
+        padding-left: 0px
+    }
+    */
+    .page-section-inner {
+        max-width: 100%;
+        /*Evita que en movile el contenido se desborde*/
+    }
+    
+    .accordion-container .panel-default,
+    .accordion-inner-container .panel-group {
+        border: none;
+        /*Elimina los bordes por defecto de los elementos desplegables de AEM*/
+    }
+                    
+                </code>
+            </pre>
+        </div>
+    </section>
                 
 
 

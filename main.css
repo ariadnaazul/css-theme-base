@@ -698,7 +698,7 @@ ul.no-style {
     background-color: ;
 }
 
-/*CSS dinámico*/
+/*Efectos y CSS dinámico*/
 .hover-up:hover {
     /*Movimiento ascendente al hacer mouseOver*/
     transform: translateY(-5px)
@@ -706,6 +706,14 @@ ul.no-style {
 
 .hover-up {
     transition: transform .2s ease-in-out;
+}
+
+.hover-shadow:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.shadow {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /*Animaciones*/
@@ -732,11 +740,7 @@ ul.no-style {
     animation-fill-mode: both;
 }
 
-/*Efectos*/
 
-.shadow {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
 
 /*Edicion de elementos de AEM*/
 .clase-accordion-element .panel-body {
