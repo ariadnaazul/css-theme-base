@@ -110,6 +110,10 @@ Indice:
     color: var(--color-text-referencias);
 }
 
+.text-white{
+    color: white;
+}
+
 .text-primario {
     color: var(--color-primario);
 }
