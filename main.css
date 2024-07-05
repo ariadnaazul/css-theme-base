@@ -25,27 +25,36 @@ Indice:
     /* Violeta profundo */
     --color-terciario: #4d1a9f;
     /* Rosa vino */
+    
+    --color-cuaternario: ;
     --color-asento-1: #7d69e1;
     /* Azul lavanda */
     --color-asento-2: #FF4081;
     /* Rosa brillante */
+    
+    --color-asento-3: ;
+    --color-asento-4: ;
     --color-efecto-1: #b09ad6;
     /* Violeta claro */
     --color-efecto-2: #47124e;
     /* Azul claro */
+    
+    --color-efecto-3: ;
+    --color-efecto-4: ;
     --color-text-base: #FFFFFF;
     /* Texto blanco */
     --color-text-referencias: #b1b1b1;
     /* Texto gris oscuro */
+
 
     /*Completar con las medidas estandar de las tarjetas del proyecto en px*/
     --padding-card: 20px;
     --padding-wide-card: 40px;
 
     /*Completar con las medidas de los iconos del proyecto en px*/
-    --icon-small: ;
-    --icon-medium: ;
-    --icon-large: ;
+    --icon-small: 50px;
+    --icon-medium: 70px;
+    --icon-large: 120px;
 
     /*Completa con el grosor de subrayado o hr que usas en el proyecto en px*/
     --grosor-hr: 2px;
@@ -109,6 +118,9 @@ Indice:
 .text-base {
     color: var(--color-text-base);
 }
+.text-white{
+    color: white;
+}
 
 .text-referencias {
     color: var(--color-text-referencias);
@@ -126,6 +138,10 @@ Indice:
     color: var(--color-terciario);
 }
 
+.text-cuaternario {
+    color: var(--color-cuaternario);
+}
+
 .text-asento-1 {
     color: var(--color-asento-1);
 }
@@ -134,12 +150,28 @@ Indice:
     color: var(--color-asento-2);
 }
 
+.text-asento-3 {
+    color: var(--color-asento-3);
+}
+
+.text-asento-4 {
+    color: var(--color-asento-4);
+}
+
 .text-efecto-1 {
     color: var(--color-efecto-1);
 }
 
 .text-efecto-2 {
     color: var(--color-efecto-2);
+}
+
+.text-efecto-3 {
+    color: var(--color-efecto-3);
+}
+
+.text-efecto-4 {
+    color: var(--color-efecto-4);
 }
 
 .text-hover-base:hover {
@@ -158,6 +190,10 @@ Indice:
     color: var(--color-terciario);
 }
 
+.text-hover-cuaternario:hover {
+    color: var(--color-cuaternario);
+}
+
 .text-hover-asento-1:hover {
     color: var(--color-asento-1);
 }
@@ -166,12 +202,28 @@ Indice:
     color: var(--color-asento-2);
 }
 
+.text-hover-asento-3:hover {
+    color: var(--color-asento-3);
+}
+
+.text-hover-asento-4:hover {
+    color: var(--color-asento-4);
+}
+
 .text-hover-efecto-1:hover {
     color: var(--color-efecto-1);
 }
 
 .text-hover-efecto-2:hover {
     color: var(--color-efecto-2);
+}
+
+.text-hover-efecto-3:hover {
+    color: var(--color-efecto-3);
+}
+
+.text-hover-efecto-4:hover {
+    color: var(--color-efecto-4);
 }
 
 .text-hover-referencias:hover {
@@ -209,6 +261,10 @@ span {
     background-color: var(--color-terciario);
 }
 
+.bg-cuaternario {
+    background-color: var(--color-cuaternario);
+}
+
 .bg-asento-1 {
     background-color: var(--color-asento-1);
 }
@@ -217,12 +273,28 @@ span {
     background-color: var(--color-asento-2);
 }
 
+.bg-asento-3 {
+    background-color: var(--color-asento-3);
+}
+
+.bg-asento-4 {
+    background-color: var(--color-asento-4);
+}
+
 .bg-efecto-1 {
     background-color: var(--color-efecto-1);
 }
 
 .bg-efecto-2 {
     background-color: var(--color-efecto-2);
+}
+
+.bg-efecto-3 {
+    background-color: var(--color-efecto-3);
+}
+
+.bg-efecto-4 {
+    background-color: var(--color-efecto-4);
 }
 
 .bg-hover-primario:hover {
@@ -237,6 +309,10 @@ span {
     background-color: var(--color-terciario);
 }
 
+.bg-hover-cuaternario:hover {
+    background-color: var(--color-cuaternario);
+}
+
 .bg-hover-asento-1:hover {
     background-color: var(--color-asento-1);
 }
@@ -245,12 +321,28 @@ span {
     background-color: var(--color-asento-2);
 }
 
+.bg-hover-asento-3:hover {
+    background-color: var(--color-asento-3);
+}
+
+.bg-hover-asento-4:hover {
+    background-color: var(--color-asento-4);
+}
+
 .bg-hover-efecto-1:hover {
     background-color: var(--color-efecto-1);
 }
 
 .bg-hover-efecto-2:hover {
     background-color: var(--color-efecto-2);
+}
+
+.bg-hover-efecto-3:hover {
+    background-color: var(--color-efecto-3);
+}
+
+.bg-hover-efecto-4:hover {
+    background-color: var(--color-efecto-4);
 }
 
 /*Subrayados*/
@@ -269,6 +361,11 @@ span {
     border-top: var(--grosor-hr) solid var(--color-terciario);
 }
 
+.subrayado-cuaternario {
+    border: none;
+    border-top: var(--grosor-hr) solid var(--color-cuaternario);
+}
+
 .subrayado-asento-1 {
     border: none;
     border-top: var(--grosor-hr) solid var(--color-asento-1);
@@ -279,6 +376,16 @@ span {
     border-top: var(--grosor-hr) solid var(--color-asento-2);
 }
 
+.subrayado-asento-3 {
+    border: none;
+    border-top: var(--grosor-hr) solid var(--color-asento-3);
+}
+
+.subrayado-asento-4 {
+    border: none;
+    border-top: var(--grosor-hr) solid var(--color-asento-4);
+}
+
 .subrayado-efecto-1 {
     border: none;
     border-top: var(--grosor-hr) solid var(--color-efecto-1);
@@ -287,6 +394,16 @@ span {
 .subrayado-efecto-2 {
     border: none;
     border-top: var(--grosor-hr) solid var(--color-efecto-2);
+}
+
+.subrayado-efecto-3 {
+    border: none;
+    border-top: var(--grosor-hr) solid var(--color-efecto-3);
+}
+
+.subrayado-efecto-4 {
+    border: none;
+    border-top: var(--grosor-hr) solid var(--color-efecto-4);
 }
 
 .subrayado-base {
@@ -337,6 +454,10 @@ sup {
 
 ul.no-style {
     list-style: none;
+}
+
+li {
+    font-family: inherit !important;
 }
 
 /*Font family*/
@@ -428,7 +549,12 @@ ul.no-style {
 .m-auto {
     margin: auto;
 }
-
+.m-0{
+    margin: 0px;
+}
+.p-0{
+    padding: 0px;
+}
 .just-start {
     justify-content: left;
     justify-content: start;
@@ -780,6 +906,18 @@ ul.no-style {
     background-color: var(--btn-theme-3-hover-bg);
     color: var(--btn-theme-3-hover-color);
     border: var(--btn-theme-3-hover-border);
+}
+
+.icon-small {
+    width: var(--icon-small);
+}
+
+.icon-medium {
+    width: var(--icon-medium);
+}
+
+.icon-large {
+    width: var(--icon-large);
 }
 
 /*Efectos y CSS dinámico*/
